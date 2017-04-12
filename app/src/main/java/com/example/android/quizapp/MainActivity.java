@@ -21,13 +21,13 @@ import static com.example.android.quizapp.R.id.bottom;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    // Used to clear the RadioButtons from another RadioGroup
     private RadioGroup radioGroupAnswersLeft;
     private RadioGroup radioGroupAnswersRight;
 
     private boolean isChecking = true;
-    private int mCheckedId = R.id.answer_1;
 
+    //  Declaring objects
     private ViewFlipper mQuestionViewFlipper;
     private RelativeLayout mFirstScreen;
     private LinearLayout mButtonPanel;
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Instances
         mFirstScreen = (RelativeLayout) findViewById(R.id.first_screen);
         mQuestionViewFlipper = (ViewFlipper) findViewById(R.id.question_view_flipper);
         mButtonPanel = (LinearLayout) findViewById(R.id.buttonPanel);
@@ -49,11 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mSubmitAnswersButton = (Button) findViewById(R.id.submit_answers);
 
 
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int height = displayMetrics.heightPixels;
-        int width = displayMetrics.widthPixels;
-
+        // Used to uncheck Radiobuttons from the other RadioGroup
         radioGroupAnswersLeft = (RadioGroup) findViewById(R.id.answers_left_group_question_four);
         radioGroupAnswersRight = (RadioGroup) findViewById(R.id.answers_right_group_question_four);
 
@@ -62,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (i != -1 && isChecking) {
                     isChecking = false;
-                    mCheckedId = i;
                     radioGroupAnswersRight.clearCheck();
                 }
                 isChecking = true;
@@ -74,21 +71,18 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (i != -1 && isChecking) {
                     isChecking = false;
-                    mCheckedId = i;
                     radioGroupAnswersLeft.clearCheck();
                 }
                 isChecking = true;
             }
         });
 
-//          Se poate folosi doar intro alta activiatate
-//                ((Activity) getContext()).getWindowManager()
-//                        .getDefaultDisplay()
-//                        .getMetrics(displayMetrics);
-
-
     }
 
+    /**
+     * Function that checks for the right answers of the questions
+     * It increments the variable numberOfQuestions for every correct answer
+     */
     public void checkAnswers() {
 
         // First Question
@@ -137,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked1 && isChecked2 && isChecked3) {
             numberOfQuestions += 1;
         }
-
     }
 
     /**
@@ -147,12 +140,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void changeLayout(View view) {
         switch (view.getId()) {
+            // Start the quiz from the first screen
             case R.id.start_quiz: {
                 mQuestionViewFlipper.setVisibility(View.VISIBLE);
                 mButtonPanel.setVisibility(View.VISIBLE);
                 mFirstScreen.setVisibility(View.GONE);
                 break;
             }
+            // Go to the next question
+            // If on the final question the next button is pressed the user is sent to submit the answers
             case R.id.next: {
                 if ( R.id.question_six == mQuestionViewFlipper.getCurrentView().getId()) {
                     checkAnswers();
@@ -165,10 +161,13 @@ public class MainActivity extends AppCompatActivity {
                 mQuestionViewFlipper.showNext();
                 break;
             }
+            // Go back to review a question
             case R.id.back: {
-                mQuestionViewFlipper.showPrevious();
+                if ( R.id.question_one != mQuestionViewFlipper.getCurrentView().getId())
+                    mQuestionViewFlipper.showPrevious();
                 break;
             }
+            // Submit the answers
             case R.id.submit_answers: {
                 String score = "This is your score: " + numberOfQuestions + " from 6.";
                 Toast.makeText(this, score, Toast.LENGTH_SHORT).show();
