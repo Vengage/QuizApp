@@ -10,39 +10,40 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="48dp"
         android:layout_marginRight="48dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
         android:src="@drawable/ardei_galben_512"
         />
 
     <TextView
         android:id="@+id/question_title"
+        style="@style/SubQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/question"
         android:gravity="center_horizontal"
         android:padding="@dimen/padding_margin_16dp"
-        style="@style/SubQuestion"
-        android:text="Ce leguma este prezentata in imaginea de mai sus?"
+        android:text="@string/what_vegetable_is_that"
         />
 
     <EditText
+        android:id="@+id/edit_box_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/question_title"
-        android:layout_marginTop="72dp"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="72dp"
         android:layout_marginRight="72dp"
-        android:id="@+id/edit_box_answer"
+        android:layout_marginTop="72dp"
         />
 
 
     <Button
         android:id="@+id/back_editbox"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/question"
@@ -50,21 +51,19 @@
         android:layout_alignStart="@+id/question"
         android:layout_marginBottom="28dp"
         android:onClick="changeLayout"
-        style="@style/Button"
-        android:text="Back"/>
+        android:text="@string/back"/>
 
     <Button
         android:id="@+id/next_editbox"
-        android:style="@style/Button"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/question"
+        android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/question"
+        android:layout_marginBottom="28dp"
         android:onClick="changeLayout"
-        android:text="Next"/>
-
+        android:text="@string/next"/>
 
 
 </RelativeLayout>

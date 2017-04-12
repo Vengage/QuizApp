@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,10 +17,15 @@ public class MainActivity extends AppCompatActivity {
     private boolean isChecking = true;
     private int mCheckedId = R.id.answer_1;
 
+
+    private ViewFlipper mQuestionViewFlipper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mQuestionViewFlipper = (ViewFlipper) findViewById(R.id.question_view_flipper);
 
 //        DisplayMetrics displayMetrics = new DisplayMetrics();
 //        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -66,28 +72,56 @@ public class MainActivity extends AppCompatActivity {
      */
     public void changeLayout(View view){
         switch (view.getId()){
-            case R.id.next_radio:{
-                setContentView(R.layout.text_check_image_layout);
+            case R.id.start_quiz:{
+                mQuestionViewFlipper.showNext();
                 break;
             }
-            case R.id.next_checkbox:{
-                setContentView(R.layout.text_edit_layout);
+            case R.id.next_question_one:{
+                mQuestionViewFlipper.showNext();
                 break;
             }
-            case R.id.next_editbox:{
-                setContentView(R.layout.text_radio_image_layout);
+            case R.id.next_question_two:{
+                mQuestionViewFlipper.showNext();
                 break;
             }
-            case R.id.back_radio:{
-                setContentView(R.layout.text_edit_layout);
+            case R.id.next_question_three:{
+                mQuestionViewFlipper.showNext();
                 break;
             }
-            case R.id.back_checkbox:{
-                setContentView(R.layout.text_radio_image_layout);
+            case R.id.next_question_four:{
+                mQuestionViewFlipper.showNext();
                 break;
             }
-            case R.id.back_editbox:{
-                setContentView(R.layout.text_check_image_layout);
+            case R.id.next_question_five:{
+                mQuestionViewFlipper.showNext();
+                break;
+            }
+            case R.id.next_question_six:{
+                mQuestionViewFlipper.showNext();
+                break;
+            }
+            case R.id.back_question_one:{
+                mQuestionViewFlipper.showPrevious();
+                break;
+            }
+            case R.id.back_question_two:{
+                mQuestionViewFlipper.showPrevious();
+                break;
+            }
+            case R.id.back_question_three:{
+                mQuestionViewFlipper.showPrevious();
+                break;
+            }
+            case R.id.back_question_four:{
+                mQuestionViewFlipper.showPrevious();
+                break;
+            }
+            case R.id.back_question_five:{
+                mQuestionViewFlipper.showPrevious();
+                break;
+            }
+            case R.id.back_question_six:{
+                mQuestionViewFlipper.showPrevious();
                 break;
             }
         }

@@ -8,10 +8,9 @@
 
     <TextView
         android:id="@+id/question"
-
         style="@style/Question"
         android:gravity="center_horizontal"
-        android:text="Care din legumele de mai jos creste in pamant?"/>
+        android:text="@string/which_grows_in_soil"/>
 
     <RadioGroup
         android:id="@+id/answers_group"

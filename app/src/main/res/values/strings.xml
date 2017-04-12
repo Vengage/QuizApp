@@ -12,4 +12,11 @@
     <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="which_is_a_pepper">Care dintre urmatoarele imagini contine un ardei?</string>
+    <string name="which_grows_in_soil">Care din legumele de mai jos creste in pamant?</string>
+    <string name="vegetables_quiz">Vegetables Quiz!</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="submit_answers">Submit answers</string>
+    <string name="title_submit_answers">Congratulations!  You finished the questions.   Submit your answers.</string>
+    <string name="what_vegetable_is_that">Ce leguma este prezentata in imaginea de mai sus?</string>
+    <string name="choose_a_tomato">Alegeti din imaginile de mai jos o rosie?</string>
 </resources>
