@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     public void checkAnswers() {
 
         // First Question
-        RadioButton firstQuestionAnswer = (RadioButton) findViewById(R.id.answer_1_question_one);
+        RadioButton firstQuestionAnswer = (RadioButton) findViewById(R.id.answer_4_question_one);
         if (firstQuestionAnswer.isChecked()) {
             numberOfQuestions += 1;
         }
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked1 && isChecked2 && isChecked3) {
             numberOfQuestions += 1;
         }
-        
+
     }
 
     /**
