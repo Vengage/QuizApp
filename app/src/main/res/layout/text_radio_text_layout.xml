@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <TextView
+        android:id="@+id/question"
+
+        style="@style/Question"
+        android:gravity="center_horizontal"
+        android:text="Care din legumele de mai jos creste in pamant?"/>
+
+    <RadioGroup
+        android:id="@+id/answers_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="72dp"
+        android:paddingStart="72dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+
+            <RadioButton
+                android:id="@+id/answer_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/castravete"/>
+
+
+            <RadioButton
+                android:id="@+id/answer_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/rosie"/>
+
+            <RadioButton
+                android:id="@+id/answer_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/ardei"/>
+
+            <RadioButton
+                android:id="@+id/answer_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/cartof"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/answers_group"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/question"
+        android:text="@string/back"
+        style="@style/Button"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignRight="@+id/question"
+        android:text="@string/next"
+        style="@style/Button"/>
+
+
+</RelativeLayout>

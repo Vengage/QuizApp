@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <ImageView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/ardei_galben_512"
+        />
+
+    <TextView
+        android:id="@+id/question_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_margin_16dp"
+        style="@style/SubQuestion"
+        android:text="Ce leguma este prezentata in imaginea de mai sus?"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/question_title"
+        android:layout_marginTop="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:id="@+id/edit_box_answer"
+        />
+
+
+    <Button
+        android:id="@+id/back_editbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/question"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/question"
+        android:layout_marginBottom="28dp"
+        android:onClick="changeLayout"
+        style="@style/Button"
+        android:text="Back"/>
+
+    <Button
+        android:id="@+id/next_editbox"
+        android:style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignRight="@+id/question"
+        android:onClick="changeLayout"
+        android:text="Next"/>
+
+
+
+</RelativeLayout>
