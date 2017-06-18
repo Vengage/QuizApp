@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="tomato">Roșie</string>
+    <string name="onion">Ceapă</string>
+    <string name="cucumber">Castravete</string>
+    <string name="cabbage">Varză</string>
+    <string name="what_vegetables">Ce legume sunt prezentate in imaginea de mai sus?</string>
+    <string name="pepper">Ardei</string>
+    <string name="patato">Cartof</string>
+    <string name="broccoli">Broccoli</string>
+    <string name="next">Următorul</string>
+    <string name="back">Înapoi</string>
+    <string name="which_is_a_pepper">Care dintre următoarele imagini conține un ardei?</string>
+    <string name="which_grows_in_soil">Care din legumele de mai jos crește în pământ?</string>
+    <string name="vegetables_quiz">Quizul legumelor!</string>
+    <string name="start_quiz">Începe quizul</string>
+    <string name="submit_answers">Trimite răspunsurile</string>
+    <string name="title_submit_answers">Felicitări! Ai terminat întrebările. Trimite răspunsurile.</string>
+    <string name="what_vegetable_is_that">Ce legumă este prezentată în imaginea de mai sus?</string>
+    <string name="choose_a_tomato">Alegeți din imaginile de mai jos o roșie?</string>
+    <string name="score">Acesta este scorul tău %1$d din 6.</string>
+</resources>

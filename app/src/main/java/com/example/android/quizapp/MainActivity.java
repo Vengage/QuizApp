@@ -3,7 +3,6 @@ package com.example.android.quizapp;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,9 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import static com.example.android.quizapp.R.id.answer_4_question_three;
-import static com.example.android.quizapp.R.id.bottom;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     // Score counter for the number of correct answers
     private int numberOfQuestions = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         mButtonPanel = (LinearLayout) findViewById(R.id.buttonPanel);
         mSubmitAnswersLayout = (RelativeLayout) findViewById(R.id.submit_answers_layout);
         mSubmitAnswersButton = (Button) findViewById(R.id.submit_answers);
-
 
         // Used to uncheck Radiobuttons from the other RadioGroup
         radioGroupAnswersLeft = (RadioGroup) findViewById(R.id.answers_left_group_question_four);
@@ -76,11 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 isChecking = true;
             }
         });
-
     }
 
     /**
-     * Function that checks for the right answers of the questions
+     * Function that check for the right answers of the questions
      * It increments the variable numberOfQuestions for every correct answer
      */
     public void checkAnswers() {
@@ -115,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Fifth Question
         EditText fifthQuestionAnswer = (EditText) findViewById(R.id.edit_box_answer_question_five);
-        if(fifthQuestionAnswer.getText().toString().equalsIgnoreCase(getResources().getString(R.string.ardei))){
+        if(fifthQuestionAnswer.getText().toString().equalsIgnoreCase(getResources().getString(R.string.pepper))){
             numberOfQuestions +=1;
         }
 
@@ -136,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Change the layout to the next question
      *
-     * @param view
+     * @param view The view that calls this function. It is a button with the text Next or Back and
+     *             the first button Start Quiz and the last button Submit ansvers
      */
     public void changeLayout(View view) {
         switch (view.getId()) {
@@ -169,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             }
             // Submit the answers
             case R.id.submit_answers: {
-                String score = "This is your score: " + numberOfQuestions + " from 6.";
+                String score = getResources().getString(R.string.score, numberOfQuestions);
                 Toast.makeText(this, score, Toast.LENGTH_SHORT).show();
                 TextView yourScoreTextView = (TextView) findViewById(R.id.your_score);
                 yourScoreTextView.setVisibility(View.VISIBLE);

@@ -8,10 +8,8 @@
     tools:context="com.example.android.quizapp.MainActivity">
 
     <RelativeLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
 
         <!--Quiz Start -->
 
@@ -52,7 +50,6 @@
                 />
         </RelativeLayout>
 
-
         <ViewFlipper
             android:id="@+id/question_view_flipper"
             android:layout_width="match_parent"
@@ -85,7 +82,7 @@
                     android:layout_below="@+id/question_one_image"
                     android:gravity="center_horizontal"
                     android:padding="@dimen/padding_margin_16dp"
-                    android:text="@string/do_you_this_vegetable"
+                    android:text="@string/what_vegetable_is_that"
                     />
 
                 <RadioGroup
@@ -99,35 +96,33 @@
                     android:paddingLeft="72dp"
                     android:paddingStart="72dp">
 
-
                     <RadioButton
                         android:id="@+id/answer_1_question_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="@string/castravete"/>
-
+                        android:text="@string/cucumber"/>
 
                     <RadioButton
                         android:id="@+id/answer_2_question_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="@string/rosie"/>
+                        android:text="@string/tomato"/>
 
                     <RadioButton
                         android:id="@+id/answer_3_question_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="@string/ardei"/>
+                        android:text="@string/pepper"/>
 
                     <RadioButton
                         android:id="@+id/answer_4_question_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="@string/brocoli"/>
+                        android:text="@string/broccoli"/>
 
                 </RadioGroup>
 
@@ -218,35 +213,33 @@
                     android:paddingLeft="72dp"
                     android:paddingStart="72dp">
 
-
                     <RadioButton
                         android:id="@+id/answer_1_question_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_margin_16dp"
-                        android:text="@string/castravete"/>
-
+                        android:text="@string/cucumber"/>
 
                     <RadioButton
                         android:id="@+id/answer_2_question_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_margin_16dp"
-                        android:text="@string/rosie"/>
+                        android:text="@string/tomato"/>
 
                     <RadioButton
                         android:id="@+id/answer_3_question_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_margin_16dp"
-                        android:text="@string/ardei"/>
+                        android:text="@string/pepper"/>
 
                     <RadioButton
                         android:id="@+id/answer_4_question_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_margin_16dp"
-                        android:text="@string/cartof"/>
+                        android:text="@string/patato"/>
 
                 </RadioGroup>
 
@@ -320,7 +313,6 @@
 
             </RelativeLayout>
 
-
             <!-- Fifth question -->
 
             <RelativeLayout
@@ -364,7 +356,6 @@
 
             </RelativeLayout>
 
-
             <!-- Sixth question -->
 
             <RelativeLayout
@@ -406,29 +397,28 @@
                     <CheckBox
                         android:id="@+id/answer_1_question_six"
                         style="@style/checkbox_text"
-                        android:text="@string/rosie"/>
+                        android:text="@string/tomato"/>
 
                     <CheckBox
                         android:id="@+id/answer_2_question_six"
                         style="@style/checkbox_text"
-                        android:text="@string/ceapa"/>
+                        android:text="@string/onion"/>
 
                     <CheckBox
                         android:id="@+id/answer_3_question_six"
                         style="@style/checkbox_text"
-                        android:text="@string/castravete"/>
+                        android:text="@string/cucumber"/>
 
                     <CheckBox
                         android:id="@+id/answer_4_question_six"
                         style="@style/checkbox_text"
-                        android:text="@string/varza"/>
+                        android:text="@string/cabbage"/>
 
                 </LinearLayout>
 
             </RelativeLayout>
 
         </ViewFlipper>
-
 
         <LinearLayout
             android:id="@+id/buttonPanel"
@@ -458,7 +448,6 @@
                 android:text="@string/next"/>
 
         </LinearLayout>
-
 
         <!-- Submit answers -->
 
@@ -491,7 +480,6 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"/>
 
-
             <TextView
                 android:id="@+id/your_score"
                 android:layout_below="@+id/main_title_submit_answers"
@@ -514,8 +502,6 @@
                 android:text="@string/submit_answers"
                 android:visibility="gone"/>
         </RelativeLayout>
-
-
 
     </RelativeLayout>
 </ScrollView>
