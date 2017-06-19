@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/question_five"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fifth question -->
+
+    <ImageView
+        android:id="@+id/question_five_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/ardei_galben_512"
+        />
+
+    <TextView
+        android:id="@+id/question_five_title"
+        style="@style/SubQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_five_image"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_margin_16dp"
+        android:text="@string/what_vegetable_is_that"
+        />
+
+    <EditText
+        android:id="@+id/edit_box_answer_question_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_five_title"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="72dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/question_two"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Second question -->
+
+    <TextView
+        android:id="@+id/question_two_title"
+        style="@style/Question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:gravity="center_horizontal"
+        android:text="@string/which_is_a_pepper"/>
+
+    <LinearLayout
+        android:id="@+id/first_layout_question_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/question_two_title"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/answer_1_question_two"
+            style="@style/checkbox_image"
+            android:drawableRight="@drawable/morcov_512"/>
+
+        <CheckBox
+            android:id="@+id/answer_2_question_two"
+            style="@style/checkbox_image"
+            android:drawableRight="@drawable/ardei_galben_512"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/first_layout_question_two"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/answer_3_question_two"
+            style="@style/checkbox_image"
+            android:drawableRight="@drawable/ardei_portocaliu_512"/>
+
+        <CheckBox
+            android:id="@+id/answer_4_question_two"
+            style="@style/checkbox_image"
+            android:drawableRight="@drawable/ridiche_alba_512"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.android.quizapp;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     // Used to clear the RadioButtons from another RadioGroup
     private RadioGroup radioGroupAnswersLeft;
@@ -82,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         RadioButton firstQuestionAnswer = (RadioButton) findViewById(R.id.answer_4_question_one);
         if (firstQuestionAnswer.isChecked()) {
             numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question one!");
         }
 
         // Second Question
@@ -92,24 +97,32 @@ public class MainActivity extends AppCompatActivity {
         boolean isChecked3 = checkBoxAnswer3.isChecked();
         if (isChecked2 && isChecked3) {
             numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question two!");
         }
 
         // Third Question
         RadioButton radioButtonAnswer4 = (RadioButton) findViewById(R.id.answer_4_question_three);
-        if(radioButtonAnswer4.isChecked()){
-            numberOfQuestions+=1;
+        if (radioButtonAnswer4.isChecked()) {
+            numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question three!");
         }
 
         // Fourth Question
         RadioButton fourthQuestionAnswer = (RadioButton) findViewById(R.id.answer_4_question_four);
         if (fourthQuestionAnswer.isChecked()) {
             numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question four!");
         }
 
         // Fifth Question
         EditText fifthQuestionAnswer = (EditText) findViewById(R.id.edit_box_answer_question_five);
-        if(fifthQuestionAnswer.getText().toString().equalsIgnoreCase(getResources().getString(R.string.pepper))){
-            numberOfQuestions +=1;
+        if (fifthQuestionAnswer.getText().toString().equalsIgnoreCase(getResources().getString(R.string.pepper))) {
+            numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question five!");
         }
 
         // Sixth Question
@@ -123,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (isChecked1 && isChecked2 && isChecked3) {
             numberOfQuestions += 1;
+        } else {
+            Log.i(TAG, "Wrong answer to question six!");
         }
     }
 
@@ -144,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             // Go to the next question
             // If on the final question the next button is pressed the user is sent to submit the answers
             case R.id.next: {
-                if ( R.id.question_six == mQuestionViewFlipper.getCurrentView().getId()) {
+                if (R.id.question_six == mQuestionViewFlipper.getCurrentView().getId()) {
                     checkAnswers();
                     mQuestionViewFlipper.setVisibility(View.GONE);
                     mButtonPanel.setVisibility(View.GONE);
@@ -157,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             }
             // Go back to review a question
             case R.id.back: {
-                if ( R.id.question_one != mQuestionViewFlipper.getCurrentView().getId())
+                if (R.id.question_one != mQuestionViewFlipper.getCurrentView().getId())
                     mQuestionViewFlipper.showPrevious();
                 break;
             }
