@@ -90,12 +90,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Second Question
+        CheckBox checkBoxAnswer1 = (CheckBox) findViewById(R.id.answer_1_question_two);
         CheckBox checkBoxAnswer2 = (CheckBox) findViewById(R.id.answer_2_question_two);
         CheckBox checkBoxAnswer3 = (CheckBox) findViewById(R.id.answer_3_question_two);
-        boolean isChecked2 = checkBoxAnswer2.isChecked();
+        CheckBox checkBoxAnswer4 = (CheckBox) findViewById(R.id.answer_4_question_two);
 
+        boolean isChecked1 = checkBoxAnswer1.isChecked();
+        boolean isChecked2 = checkBoxAnswer2.isChecked();
         boolean isChecked3 = checkBoxAnswer3.isChecked();
-        if (isChecked2 && isChecked3) {
+        boolean isChecked4 = checkBoxAnswer4.isChecked();
+
+        if (!isChecked1 && isChecked2 && isChecked3 && !isChecked4) {
             numberOfQuestions += 1;
         } else {
             Log.i(TAG, "Wrong answer to question two!");
@@ -129,12 +134,14 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxAnswer1QuestionSix = (CheckBox) findViewById(R.id.answer_1_question_six);
         CheckBox checkBoxAnswer2QuestionSix = (CheckBox) findViewById(R.id.answer_2_question_six);
         CheckBox checkBoxAnswer3QuestionSix = (CheckBox) findViewById(R.id.answer_3_question_six);
+        CheckBox checkBoxAnswer4QuestionSix = (CheckBox) findViewById(R.id.answer_4_question_six);
 
-        boolean isChecked1 = checkBoxAnswer1QuestionSix.isChecked();
+        isChecked1 = checkBoxAnswer1QuestionSix.isChecked();
         isChecked2 = checkBoxAnswer2QuestionSix.isChecked();
         isChecked3 = checkBoxAnswer3QuestionSix.isChecked();
+        isChecked4 = checkBoxAnswer4QuestionSix.isChecked();
 
-        if (isChecked1 && isChecked2 && isChecked3) {
+        if (isChecked1 && isChecked2 && isChecked3 && !isChecked4) {
             numberOfQuestions += 1;
         } else {
             Log.i(TAG, "Wrong answer to question six!");

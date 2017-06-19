@@ -10,18 +10,18 @@
 
     <style name="Question">
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/text_size_24sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">32dp</item>
-        <item name="android:layout_marginBottom">32dp</item>
-        <item name="android:layout_marginLeft">32dp</item>
-        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_32dp</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_32dp</item>
+        <item name="android:layout_marginLeft">@dimen/padding_margin_32dp</item>
+        <item name="android:layout_marginRight">@dimen/padding_margin_32dp</item>
     </style>
 
     <style name="SubQuestion">
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -48,9 +48,9 @@
         <item name="android:paddingLeft">@dimen/padding_margin_16dp</item>
         <item name="android:paddingRight">@dimen/padding_margin_16dp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:layout_marginTop">32dp</item>
-        <item name="android:layout_marginBottom">16dp</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_32dp</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_16dp</item>
+        <item name="android:layout_marginLeft">@dimen/padding_margin_16dp</item>
+        <item name="android:layout_marginRight">@dimen/padding_margin_16dp</item>
     </style>
 </resources>
